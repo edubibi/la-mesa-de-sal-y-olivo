@@ -1,0 +1,16 @@
+/* Logo adjustments */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo {
+    max-height: 120px;
+    /* Adjust based on preference */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Hide text if logo is self-sufficient, or style it to compliment */
+/* .logo-container h1 { ... } */

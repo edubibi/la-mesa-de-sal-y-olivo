@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mesa de Sal y Olivo | Cocina Española</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <meta name="description" content="La Mesa de Sal y Olivo: Tu libro interactivo de recetas de cocina española.">
+</head>
+
+<body>
+
+    <!-- Hero / Landing Section -->
+    <header class="hero-landing">
+        <div class="logo-area">
+            <img src="assets/images/la mesa de sal y oliva.png" alt="Logo La Mesa de Sal y Olivo" class="landing-logo">
+        </div>
+        <div class="hero-text">
+            <h1>El Sabor de Nuestra Tierra</h1>
+            <p>Recetas tradicionales, momentos inolvidables.</p>
+            <p style="font-size: 0.9rem; font-style: italic; margin-bottom: 1.5rem; opacity: 0.8;">Recetas recopiladas,
+                y con su "toque" personal, por: Eduardo Ramírez "dubi"</p>
+            <button onclick="scrollToSection('families-section')" class="cta-button">Ver Carta</button>
+            <button onclick="toggleIngredientsPanel()" class="cta-button secondary-cta">Guía de Alimentos 🍎</button>
+        </div>
+    </header>
+
+    <!-- Navigation Bar (Sticky after scroll) -->
+    <nav class="main-nav-bar" id="main-nav">
+        <div class="nav-logo-small">La Mesa de Sal y Olivo</div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar receta...">
+        </div>
+    </nav>
+
+    <main id="app">
+
+        <!-- Families Categories -->
+        <section id="families-section" class="section-container">
+            <h2 class="section-title-main">Nuestras Familias</h2>
+            <div class="families-grid">
+                <button class="family-card" data-family="verduras" onclick="filterByFamily('verduras')">
+                    <span class="icon">🥗</span>
+                    <h3>Verduras</h3>
+                </button>
+                <button class="family-card" data-family="carnes" onclick="filterByFamily('carnes')">
+                    <span class="icon">🍖</span>
+                    <h3>Carnes</h3>
+                </button>
+                <button class="family-card" data-family="pescados" onclick="filterByFamily('pescados')">
+                    <span class="icon">🐟</span>
+                    <h3>Pescados</h3>
+                </button>
+                <button class="family-card" data-family="arroces" onclick="filterByFamily('arroces')">
+                    <span class="icon">🍚</span>
+                    <h3>Arroces</h3>
+                </button>
+                <button class="family-card" data-family="paellas" onclick="filterByFamily('paellas')">
+                    <span class="icon">🥘</span>
+                    <h3>Paellas</h3>
+                </button>
+                <button class="family-card" data-family="pastas" onclick="filterByFamily('pastas')">
+                    <span class="icon">🍝</span>
+                    <h3>Pastas</h3>
+                </button>
+                <button class="family-card" data-family="desayunos" onclick="filterByFamily('desayunos')">
+                    <span class="icon">☕</span>
+                    <h3>Desayunos</h3>
+                </button>
+                <button class="family-card" data-family="postres" onclick="filterByFamily('postres')">
+                    <span class="icon">🍰</span>
+                    <h3>Postres</h3>
+                </button>
+                <button class="family-card" data-family="huevos" onclick="filterByFamily('huevos')">
+                    <span class="icon">🥚</span>
+                    <h3>Huevos</h3>
+                </button>
+                <button class="family-card active" data-family="all" onclick="filterByFamily('all')">
+                    <span class="icon">🍽️</span>
+                    <h3>Todo</h3>
+                </button>
+            </div>
+        </section>
+
+        <!-- Occasions Filter -->
+        <section id="occasions-section" class="section-container">
+            <h2 class="section-title-main">¿Para cuándo es?</h2>
+            <div class="occasions-scroll">
+                <button class="occasion-chip" onclick="filterByOccasion('desayuno')">Desayuno</button>
+                <button class="occasion-chip" onclick="filterByOccasion('brunch')">Brunch</button>
+                <button class="occasion-chip" onclick="filterByOccasion('comida')">Comida</button>
+                <button class="occasion-chip" onclick="filterByOccasion('merienda')">Merienda</button>
+                <button class="occasion-chip" onclick="filterByOccasion('cena')">Cena</button>
+                <button class="occasion-chip" onclick="filterByOccasion('tapas')">Tapeo</button>
+            </div>
+        </section>
+
+        <!-- Recipe Results -->
+        <section class="recipes-grid" id="recipes-container">
+            <!-- Las recetas se cargarán aquí dinámicamente -->
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 La Mesa de Sal y Olivo. Pasión por la cocina.</p>
+    </footer>
+
+    <!-- Modal de Receta -->
+    <div id="recipe-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div id="modal-body">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel Guía de Alimentos -->
+    <div id="ingredients-panel" class="modal hidden">
+        <div class="modal-content large-modal">
+            <button class="close-modal" onclick="toggleIngredientsPanel()">&times;</button>
+            <div class="panel-header">
+                <h2>Guía de Alimentos 🍎</h2>
+                <div class="search-container" style="max-width: 400px; margin: 0 auto 2rem;">
+                    <input type="text" id="ingredients-search" placeholder="Buscar ingrediente (ej. Perejil)..."
+                        oninput="renderIngredients()">
+                </div>
+                <div class="category-filters" id="ing-cat-filters">
+                    <!-- Filters injected here -->
+                </div>
+            </div>
+            <div id="ingredients-grid" class="ingredients-grid">
+                <!-- Cards injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/ingredients.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Smooth scroll helper
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
