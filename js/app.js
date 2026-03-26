@@ -75,7 +75,8 @@ function renderRecipes() {
     // Lógica de filtrado
     const filtered = state.recipes.filter(r => {
         // Filtro Familia
-        const matchFamily = state.currentFamily === 'all' || r.family === state.currentFamily;
+        const matchFamily = state.currentFamily === 'all' ||
+            (Array.isArray(r.family) ? r.family.includes(state.currentFamily) : r.family === state.currentFamily);
 
         // Filtro Ocasión (si está activo)
         const matchOccasion = !state.currentOccasion || (r.occasion && r.occasion.includes(state.currentOccasion));
@@ -191,74 +192,4 @@ function updatePortions(delta) {
             el.innerText = newVal % 1 === 0 ? newVal : newVal.toFixed(1).replace('.', ',');
         }
     });
-}
-
-// --- GUÍA DE ALIMENTOS ---
-const ingPanel = document.getElementById('ingredients-panel');
-const ingGrid = document.getElementById('ingredients-grid');
-const ingSearch = document.getElementById('ingredients-search');
-let activeIngCategory = 'all';
-
-function toggleIngredientsPanel() {
-    const isHidden = ingPanel.classList.contains('hidden');
-    if (isHidden) {
-        ingPanel.classList.remove('hidden');
-        ingPanel.classList.add('visible');
-        document.body.style.overflow = 'hidden';
-        renderIngredients();
-        renderIngCategories();
-    } else {
-        ingPanel.classList.remove('visible');
-        setTimeout(() => ingPanel.classList.add('hidden'), 300);
-        document.body.style.overflow = '';
-    }
-}
-
-function renderIngCategories() {
-    const categories = ['all', ...new Set(ingredientsData.map(i => i.category))];
-    const container = document.getElementById('ing-cat-filters');
-
-    container.innerHTML = categories.map(cat => `
-        <button class="occasion-chip ${activeIngCategory === cat ? 'active' : ''}" 
-                onclick="filterIngCategory('${cat}')">
-            ${cat === 'all' ? 'Todos' : cat}
-        </button>
-    `).join('');
-}
-
-function filterIngCategory(cat) {
-    activeIngCategory = cat;
-    renderIngCategories();
-    renderIngredients();
-}
-
-function renderIngredients() {
-    const term = ingSearch.value.toLowerCase();
-
-    const filtered = ingredientsData.filter(ing => {
-        const matchesTerm = ing.name.toLowerCase().includes(term) ||
-            ing.benefits.toLowerCase().includes(term) ||
-            ing.description.toLowerCase().includes(term) ||
-            ing.category.toLowerCase().includes(term); // Enable searching by category "Zumos"
-        const matchesCat = activeIngCategory === 'all' || ing.category === activeIngCategory;
-
-        return matchesTerm && matchesCat;
-    });
-
-    if (filtered.length === 0) {
-        ingGrid.innerHTML = `<p style="text-align:center; width:100%; grid-column:1/-1;">No se encontraron ingredientes.</p>`;
-        return;
-    }
-
-    ingGrid.innerHTML = filtered.map(ing => `
-        <div class="ingredient-card">
-            <div class="ing-icon">${ing.emoji}</div>
-            <div class="ing-content">
-                <h3>${ing.name}</h3>
-                <span class="ing-category">${ing.category}</span>
-                <p><strong>Beneficios:</strong> ${ing.benefits}</p>
-                <p>${ing.description}</p>
-            </div>
-        </div>
-    `).join('');
 }

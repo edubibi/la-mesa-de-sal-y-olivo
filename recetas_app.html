@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>La Mesa de Sal y Olivo | App</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- App Styles -->
+    <link rel="stylesheet" href="css/app_style.css">
+
+    <!-- PWA Manifest (Optional for future) -->
+    <meta name="theme-color" content="#556b2f">
+</head>
+
+<body>
+
+    <div id="app-container">
+
+        <!-- HEADER -->
+        <header id="app-header">
+            <button id="btn-back" class="icon-btn hidden">❮</button>
+            <div class="header-title">La Mesa de Sal y Olivo</div>
+            <button id="btn-home" class="icon-btn hidden">🏠</button>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main id="main-content">
+            <!-- Dynamic Views will be injected here -->
+        </main>
+
+    </div>
+
+    <!-- TEMPLATES (Hidden) -->
+
+    <!-- 1. HOME VIEW TEMPLATE -->
+    <template id="tpl-home">
+        <div class="view-home animate-fade-in">
+            <div class="logo-hero">
+                <img src="assets/images/la mesa de sal y oliva.png" alt="Logo" class="app-logo">
+                <p class="app-subtitle">Tu recetario de bolsillo</p>
+            </div>
+
+            <h2 class="section-title">¿Qué comemos hoy?</h2>
+
+            <div class="categories-grid">
+                <!-- Categories injected here -->
+            </div>
+        </div>
+    </template>
+
+    <!-- 2. CATEGORY LIST VIEW TEMPLATE -->
+    <template id="tpl-list">
+        <div class="view-list animate-slide-in">
+            <h2 id="list-title" class="list-header-title">Categoría</h2>
+            <div class="recipe-list" id="recipe-list-container">
+                <!-- Recipes list items injected here -->
+            </div>
+        </div>
+    </template>
+
+    <!-- 3. RECIPE DETAIL VIEW TEMPLATE -->
+    <template id="tpl-recipe">
+        <div class="view-recipe animate-slide-in">
+            <div class="recipe-hero-image">
+                <img id="r-image" src="" alt="">
+                <div class="recipe-overlay-title">
+                    <h1 id="r-title">Título Receta</h1>
+                </div>
+            </div>
+
+            <div class="recipe-meta-bar">
+                <span id="r-time">⏱ 0 min</span>
+                <span id="r-servings">👥 0 pax</span>
+                <span id="r-difficulty">🔥 Fácil</span>
+            </div>
+
+            <div class="recipe-content-scroll">
+                <div class="recipe-section">
+                    <h3>Ingredientes</h3>
+                    <ul id="r-ingredients" class="ingredients-list">
+                        <!-- Li items -->
+                    </ul>
+                </div>
+
+                <div class="recipe-section">
+                    <h3>Elaboración</h3>
+                    <div id="r-steps" class="steps-container">
+                        <!-- Step items -->
+                    </div>
+                </div>
+
+                <div class="recipe-footer-note">
+                    <p>¡Buen provecho!</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Scripts -->
+    <!-- Load shared data -->
+    <script src="js/data.js"></script>
+    <!-- App Logic -->
+    <script src="js/app_logic.js"></script>
+
+</body>
+
+</html>

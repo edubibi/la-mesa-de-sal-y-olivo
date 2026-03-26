@@ -19,56 +19,9 @@ const recipesData = [
             { name: "Sal", amount: 1, unit: "pizca" }
         ],
         steps: [
-            { title: "Pochar (El Secreto)", desc: "Cortar patatas y meterlas en agua fría en el congelador 30 min. Sacar, escurrir y secar bien. Freír a fuego lento hasta que estén tiernas. Añadir la cebolla al final para que coja color." },
-            { title: "Mezclar y Reposar", desc: "Escurrir aceite en un colador grande. Mezclar con los 6 huevos batidos y sal. Tapar con un paño y dejar reposar 10 min (clave para que empape)." },
-            { title: "Cuajar", desc: "Cuajar en sartén caliente con poco aceite, vuelta y vuelta al gusto. Servir inmediatamente." },
-            { title: "Nota de Raciones", desc: "Para 4 personas si es aperitivo/pincho. Para 2 personas si es plato principal (ideal con pimientos verdes fritos)." }
-        ]
-    },
-    {
-        id: 23,
-        title: "Tigres (Mejillones)",
-        family: "tapas",
-        occasion: ["tapas", "entrante"],
-        time: 60,
-        difficulty: "Media",
-        servings: 6,
-        origin: "Galicia/Nacional",
-        searchKeywords: ["mejillones", "bechamel", "picante", "relleno"],
-        image: "assets/fotos_recetas/tigres_mejillones_rellenos.png",
-        ingredients: [
-            { name: "Mejillones", amount: 1, unit: "kg" },
-            { name: "Cebolla", amount: 1, unit: "uni" },
-            { name: "Harina", amount: 2, unit: "cdas" },
-            { name: "Leche", amount: 400, unit: "ml" },
-            { name: "Tomate frito", amount: 2, unit: "cdas" },
-            { name: "Guindilla", amount: 1, unit: "uni" }
-        ],
-        steps: [
-            { title: "Cocer", desc: "Abrir mejillones al vapor. Picar carne y guardar conchas." },
-            { title: "Relleno", desc: "Sofreír cebolla y guindilla. Añadir carne, harina y leche (bechamel espesa) + tomate." },
-            { title: "Empanar", desc: "Rellenar conchas, pasar por huevo/pan rallado y freír." }
-        ]
-    },
-    {
-        id: 24,
-        title: "Torreznos de Soria",
-        family: "tapas",
-        occasion: ["tapas", "entrante", "aperitivo"],
-        time: 45,
-        difficulty: "Media",
-        servings: 4,
-        origin: "Soria",
-        searchKeywords: ["panceta", "frito", "crujiente"],
-        image: "assets/fotos_recetas/torreznos_de_soria_crujientes.png",
-        ingredients: [
-            { name: "Panceta curada (adobada)", amount: 500, unit: "g" },
-            { name: "Aceite de girasol", amount: 1, unit: "chorro" }
-        ],
-        steps: [
-            { title: "Orear", desc: "Sacar la panceta del envase 2h antes para que se seque la piel." },
-            { title: "Pochar", desc: "Poner en sartén fría con piel abajo y poco aceite. Fuego muy bajo 30min hasta que salgan burbujas." },
-            { title: "Subir", desc: "Subir fuego al máximo para que la piel sufle y quede crujiente." }
+            { title: "Pochar", desc: "Cortar patatas y cebolla. Freír a fuego lento en abundante aceite hasta que estén tiernas." },
+            { title: "Mezclar", desc: "Escurrir el aceite. Mezclar con los huevos batidos y sal. Reposar 5 min." },
+            { title: "Cuajar", desc: "Cuajar en sartén con poco aceite, vuelta y vuelta al gusto." }
         ]
     },
     {
@@ -99,29 +52,29 @@ const recipesData = [
     // --- ARROCES ---
     {
         id: 2,
-        title: "Paella de Marisco",
-        family: "paellas",
-        occasion: ["comida", "domingo", "verano"],
-        time: 50,
-        difficulty: "Media",
+        title: "Paella Valenciana",
+        family: "arroces",
+        occasion: ["comida", "domingo"],
+        time: 90,
+        difficulty: "Alta",
         servings: 4,
-        origin: "Nacional",
-        searchKeywords: ["arroz", "gamba", "mejillon", "marisco", "mixta"],
+        origin: "Valencia",
+        searchKeywords: ["arroz", "pollo", "conejo", "socarrat"],
         image: "assets/fotos_recetas/paella_de_marisco.png",
         ingredients: [
             { name: "Arroz bomba", amount: 400, unit: "g" },
-            { name: "Gambones/Gambas", amount: 8, unit: "uni" },
-            { name: "Mejillones", amount: 300, unit: "g" },
-            { name: "Anillas de calamar", amount: 250, unit: "g" },
-            { name: "Tomate rallado", amount: 2, unit: "uni" },
-            { name: "Pimiento rojo", amount: 1, unit: "uni" },
-            { name: "Azafrán y Pimentón", amount: 1, unit: "pizca" },
-            { name: "Fumet (Caldo pescado)", amount: 1.2, unit: "l" }
+            { name: "Pollo", amount: 500, unit: "g" },
+            { name: "Conejo", amount: 400, unit: "g" },
+            { name: "Judía verde plana", amount: 200, unit: "g" },
+            { name: "Garrofó", amount: 150, unit: "g" },
+            { name: "Tomate triturado", amount: 150, unit: "g" },
+            { name: "Azafrán", amount: 1, unit: "pizca" },
+            { name: "Caldo/Agua", amount: 1.2, unit: "l" }
         ],
         steps: [
-            { title: "Sofreír", desc: "Dorar las gambas y retirar. Sofreír calamar y verduras (pimiento, tomate) con sal." },
-            { title: "Arroz", desc: "Añadir arroz y pimentón/azafrán. Nacarar unos minutos." },
-            { title: "Cocer", desc: "Añadir el fumet hirviendo. Cocer 18 min. Colocar gambas y mejillones al final." }
+            { title: "Sofreír", desc: "Dorar muy bien la carne. Añadir verdura y luego tomate." },
+            { title: "Caldo", desc: "Añadir agua, azafrán y dejar cocer 20 min." },
+            { title: "Arroz", desc: "Añadir arroz, cocer 18 min (10 fuerte, 8 suave)." }
         ]
     },
     {
@@ -134,7 +87,7 @@ const recipesData = [
         servings: 4,
         origin: "Alicante/Cataluña",
         searchKeywords: ["sepia", "calamar", "tinta", "alioli"],
-        image: "assets/fotos_recetas/arroz_negro.png",
+        image: "assets/fotos_recetas/arroz_negro.png", // Placeholder genérico arroz
         ingredients: [
             { name: "Arroz bomba", amount: 400, unit: "g" },
             { name: "Sepia limpia", amount: 2, unit: "uni" },
@@ -149,65 +102,12 @@ const recipesData = [
             { title: "Cocer", desc: "Añadir caldo caliente. Cocer 18 min. Servir con alioli." }
         ]
     },
-    {
-        id: 32,
-        title: "Arroz Caldoso con Bogavante",
-        family: "arroces",
-        occasion: ["comida", "celebracion", "domingo"],
-        time: 50,
-        difficulty: "Media",
-        servings: 4,
-        origin: "Nacional/Costa",
-        searchKeywords: ["bogavante", "marisco", "caldo", "lujo"],
-        image: "assets/fotos_recetas/arroz_caldoso_con_bogavante.png",
-        ingredients: [
-            { name: "Arroz bomba", amount: 300, unit: "g" },
-            { name: "Bogavante", amount: 2, unit: "uni" },
-            { name: "Fumet de pescado rojo", amount: 1.5, unit: "l" },
-            { name: "Tomate rallado", amount: 2, unit: "uni" },
-            { name: "Ñora", amount: 1, unit: "uni" },
-            { name: "Ajo y Perejil", amount: 1, unit: "majada" },
-            { name: "Brandy", amount: 1, unit: "copa" }
-        ],
-        steps: [
-            { title: "Bogavante", desc: "Trocear el bogavante (aprovechar jugos de la cabeza). Sofreírlo fuerte y retirar." },
-            { title: "Sofrito", desc: "En el mismo aceite, sofreír ñora, ajo y tomate. Añadir el arroz y el brandy (flambear opcional)." },
-            { title: "Cocer", desc: "Añadir caldo hirviendo. Cocer 15 min. Añadir el bogavante los últimos 3-4 min." }
-        ]
-    },
-    {
-        id: 30,
-        title: "Arroz al Horno",
-        family: "arroces",
-        occasion: ["comida", "invierno", "domingo"],
-        time: 55,
-        difficulty: "Fácil",
-        servings: 4,
-        origin: "Comunidad Valenciana",
-        searchKeywords: ["arroz", "costillas", "morcilla", "garbanzos"],
-        image: "assets/fotos_recetas/arroz_al_horno.png",
-        ingredients: [
-            { name: "Arroz bomba", amount: 400, unit: "g" },
-            { name: "Costillas de cerdo", amount: 300, unit: "g" },
-            { name: "Morcilla de cebolla", amount: 2, unit: "uni" },
-            { name: "Garbanzos cocidos", amount: 100, unit: "g" },
-            { name: "Patata", amount: 1, unit: "uni" },
-            { name: "Cabeza de ajos", amount: 1, unit: "uni" },
-            { name: "Tomate", amount: 1, unit: "uni" },
-            { name: "Caldo de cocido", amount: 800, unit: "ml" }
-        ],
-        steps: [
-            { title: "Sofreír", desc: "Dorar costillas, morcilla y patata en rodajas. Reservar. Sofreír arroz en ese aceite." },
-            { title: "Montar", desc: "En cazuela de barro, poner arroz, carne, garbanzos, tomate y la cabeza de ajos al centro." },
-            { title: "Hornear", desc: "Añadir caldo hirviendo. Hornear 20-25 min a 220ºC hasta que esté seco y dorado." }
-        ]
-    },
 
     // --- VERDURAS ---
     {
         id: 3,
         title: "Gazpacho Andaluz",
-        family: "verduras",
+        family: "only_vegetal",
         occasion: ["comida", "cena", "entrante", "verano"],
         time: 15,
         difficulty: "Baja",
@@ -229,90 +129,16 @@ const recipesData = [
         ]
     },
     {
-        id: 19,
-        title: "Patatas Bravas",
-        family: "tapas",
-        occasion: ["tapas", "entrante", "comida"],
-        time: 30,
-        difficulty: "Fácil",
-        servings: 4,
-        origin: "Madrid",
-        searchKeywords: ["patata", "salsa", "picante", "tapa"],
-        image: "assets/fotos_recetas/patatas_bravas.png",
-        ingredients: [
-            { name: "Patatas", amount: 3, unit: "grandes" },
-            { name: "Aceite de oliva", amount: 1, unit: "chorro" },
-            { name: "Pimentón picante", amount: 1, unit: "cdita" },
-            { name: "Pimentón dulce", amount: 1, unit: "cdita" },
-            { name: "Harina", amount: 1, unit: "cda" },
-            { name: "Caldo de pollo", amount: 200, unit: "ml" }
-        ],
-        steps: [
-            { title: "Freír", desc: "Cortar patatas en cubos irregulares y freír. Primero suave, luego fuerte para dorar." },
-            { title: "Salsa", desc: "Sofreír harina y pimentones con aceite. Añadir caldo poco a poco hasta espesar." }
-        ]
-    },
-    {
-        id: 20,
-        title: "Ensaladilla Rusa",
-        family: "tapas",
-        occasion: ["tapas", "entrante", "comida"],
-        time: 45,
-        difficulty: "Fácil",
-        servings: 4,
-        origin: "Nacional",
-        searchKeywords: ["patata", "mayonesa", "atún", "huevo"],
-        image: "assets/fotos_recetas/ensaladilla_rusa.png",
-        ingredients: [
-            { name: "Patatas", amount: 4, unit: "uni" },
-            { name: "Zanahorias", amount: 2, unit: "uni" },
-            { name: "Huevos", amount: 2, unit: "uni" },
-            { name: "Atún en aceite", amount: 2, unit: "latas" },
-            { name: "Mayonesa", amount: 200, unit: "g" },
-            { name: "Guisantes", amount: 50, unit: "g" }
-        ],
-        steps: [
-            { title: "Cocer", desc: "Cocer patatas, zanahorias y huevos. Dejar enfriar." },
-            { title: "Mezclar", desc: "Picar todo menudo, mezclar con atún y mayonesa." },
-            { title: "Decorar", desc: "Servir con picos o regañás." }
-        ]
-    },
-    {
-        id: 21,
-        title: "Calamares a la Romana",
-        family: "tapas",
-        occasion: ["tapas", "entrante", "bocadillo"],
-        time: 30,
-        difficulty: "Media",
-        servings: 4,
-        origin: "Nacional",
-        searchKeywords: ["calamar", "rebozado", "frito", "limón"],
-        image: "assets/fotos_recetas/calamares_a_la_romana.png",
-        ingredients: [
-            { name: "Anillas de calamar", amount: 500, unit: "g" },
-            { name: "Harina", amount: 100, unit: "g" },
-            { name: "Huevo", amount: 2, unit: "uni" },
-            { name: "Gaseosa o Cerveza", amount: 50, unit: "ml" },
-            { name: "Sal", amount: 1, unit: "pizca" }
-        ],
-        steps: [
-            { title: "Masa", desc: "Hacer una masa con harina, huevo y gaseosa/cerveza. Debe quedar espesita." },
-            { title: "Freír", desc: "Pasar aros por la masa y freír en aceite muy caliente." }
-        ]
-
-    },
-
-    {
         id: 6,
         title: "Pisto Manchego",
-        family: "verduras",
+        family: "only_vegetal",
         occasion: ["comida", "cena", "tapas"],
         time: 50,
         difficulty: "Media",
         servings: 4,
         origin: "La Mancha",
         searchKeywords: ["calabacín", "pimiento", "tomate frito"],
-        image: "assets/fotos_recetas/pisto_manchego.png",
+        image: "assets/fotos_recetas/pisto_manchego.png", // Ratatouille lookalike
         ingredients: [
             { name: "Calabacín", amount: 1, unit: "uni" },
             { name: "Pimiento rojo", amount: 1, unit: "uni" },
@@ -330,7 +156,7 @@ const recipesData = [
     {
         id: 7,
         title: "Salmorejo Cordobés",
-        family: "verduras",
+        family: "only_vegetal",
         occasion: ["comida", "entrante", "verano", "tapas"],
         time: 15,
         difficulty: "Fácil",
@@ -365,7 +191,7 @@ const recipesData = [
         servings: 4,
         origin: "Asturias",
         searchKeywords: ["fabes", "chorizo", "morcilla", "guiso"],
-        image: "assets/fotos_recetas/fabada_asturiana.png",
+        image: "assets/fotos_recetas/fabada_asturiana.png", // Bean stew generic
         ingredients: [
             { name: "Fabes de la Granja", amount: 500, unit: "g" },
             { name: "Chorizo asturiano", amount: 2, unit: "uni" },
@@ -378,157 +204,6 @@ const recipesData = [
             { title: "Remojo", desc: "Poner las fabes en remojo la noche anterior." },
             { title: "Cocer", desc: "Poner fabes y compango (carnes) en olla cubiertas de agua. Cocer a fuego muy lento 2-3 horas." },
             { title: "Asustar", desc: "Echar un chorro de agua fría 2 o 3 veces durante la cocción para cortar el hervor (asustar las fabes)." }
-        ]
-    },
-    {
-        id: 25,
-        title: "Lentejas con Chorizo",
-        family: "carnes",
-        occasion: ["comida", "invierno", "cuchara"],
-        time: 50,
-        difficulty: "Fácil",
-        servings: 4,
-        origin: "Nacional",
-        searchKeywords: ["lenteja", "chorizo", "hierro"],
-        image: "assets/fotos_recetas/lentejas_con_chorizo.png",
-        ingredients: [
-            { name: "Lentejas pardinas", amount: 400, unit: "g" },
-            { name: "Chorizo", amount: 2, unit: "uni" },
-            { name: "Zanahoria", amount: 2, unit: "uni" },
-            { name: "Patata", amount: 1, unit: "uni" },
-            { name: "Ajo y Laurel", amount: 1, unit: "uni" }
-        ],
-        steps: [
-            { title: "Todo en crudo", desc: "Poner todos los ingredientes en olla con agua fría (cubrir 2 dedos)." },
-            { title: "Cocer", desc: "Llevar a ebullición y bajar fuego. Cocinar 40-50 min hasta que estén tiernas." },
-            { title: "Sofreír (opcional)", desc: "Se puede hacer un refrito de pimentón al final para dar brillo." }
-        ]
-    },
-    {
-        id: 26,
-        title: "Cocido Madrileño",
-        family: "carnes",
-        occasion: ["comida", "domingo", "invierno"],
-        time: 240,
-        difficulty: "Alta",
-        servings: 6,
-        origin: "Madrid",
-        searchKeywords: ["garbanzos", "sopa", "vuelcos"],
-        image: "assets/fotos_recetas/cocido_madrileño.png",
-        ingredients: [
-            { name: "Garbanzos", amount: 500, unit: "g" },
-            { name: "Morcillo", amount: 500, unit: "g" },
-            { name: "Gallina", amount: 1, unit: "cuarto" },
-            { name: "Hueso jamón", amount: 1, unit: "uni" },
-            { name: "Tocino", amount: 100, unit: "g" },
-            { name: "Verdura (repollo)", amount: 1, unit: "uni" },
-            { name: "Chorizo y Morcilla", amount: 2, unit: "uni" },
-            { name: "Fideos", amount: 100, unit: "g" }
-        ],
-        steps: [
-            { title: "Caldos", desc: "Cocer carnes y garbanzos (en malla) durante 3-4 horas." },
-            { title: "Verdura", desc: "Cocer repollo y embutidos aparte." },
-            { title: "Tres Vuelcos", desc: "Servir: 1º Sopa (con fideos), 2º Garbanzos y verdura, 3º Carnes." }
-        ]
-    },
-    {
-        id: 28,
-        title: "Migas de Pastor",
-        family: "carnes",
-        occasion: ["comida", "invierno", "campo"],
-        time: 45,
-        difficulty: "Media",
-        servings: 4,
-        origin: "Castilla-La Mancha/Extremadura",
-        searchKeywords: ["pan", "panceta", "chorizo", "uvas"],
-        image: "assets/fotos_recetas/migas.png",
-        ingredients: [
-            { name: "Pan de hogaza (duro)", amount: 500, unit: "g" },
-            { name: "Panceta", amount: 150, unit: "g" },
-            { name: "Chorizo", amount: 150, unit: "g" },
-            { name: "Ajo", amount: 6, unit: "dientes" },
-            { name: "Uvas (acompañar)", amount: 200, unit: "g" },
-            { name: "Pimentón dulce", amount: 1, unit: "cdita" }
-        ],
-        steps: [
-            { title: "Humedecer", desc: "Trocear el pan y salpicar con un poco de agua con sal. Dejar reposar tapado un rato." },
-            { title: "Sofreír", desc: "Freír ajos, panceta y chorizo. Retirar. En esa grasa, echar el pan y remover constantemente." },
-            { title: "Servir", desc: "Cuando el pan esté suelto y dorado, mezclar con la carne. Servir con uvas." }
-        ]
-    },
-    {
-        id: 29,
-        title: "Morteruelo Conquense",
-        family: "carnes",
-        occasion: ["comida", "invierno", "caza", "entrante"],
-        time: 120,
-        difficulty: "Media",
-        servings: 6,
-        origin: "Cuenca",
-        searchKeywords: ["higado", "caza", "paté", "caliente"],
-        image: "assets/fotos_recetas/morteruelo.png",
-        ingredients: [
-            { name: "Hígado de cerdo", amount: 250, unit: "g" },
-            { name: "Lomo de cerdo", amount: 250, unit: "g" },
-            { name: "Gallina o Caza", amount: 250, unit: "g" },
-            { name: "Pan rallado/Miga", amount: 200, unit: "g" },
-            { name: "Especias (clavo, canela, alcaravea)", amount: 1, unit: "pizca" }
-        ],
-        steps: [
-            { title: "Cocer", desc: "Cocer todas las carnes con agua y sal durante 2 horas hasta que se deshagan." },
-            { title: "Machacar", desc: "Desmigar muy fino o triturar las carnes. Colar el caldo." },
-            { title: "Guisar", desc: "Sofreír pimentón y especias, añadir carnes, caldo y pan. Cocer removiendo hasta obtener una pasta." }
-        ]
-    },
-    {
-        id: 27,
-        title: "Potaje de Garbanzos",
-        family: "verduras",
-        occasion: ["comida", "semana santa", "vigilia"],
-        time: 60,
-        difficulty: "Media",
-        servings: 4,
-        origin: "Nacional",
-        searchKeywords: ["espinacas", "bacalao", "huevo duro"],
-        image: "assets/fotos_recetas/potaje_de_garbanzos.png",
-        ingredients: [
-            { name: "Garbanzos cocidos", amount: 600, unit: "g" },
-            { name: "Espinacas", amount: 300, unit: "g" },
-            { name: "Bacalao desmigado", amount: 200, unit: "g" },
-            { name: "Huevo duro", amount: 2, unit: "uni" },
-            { name: "Cebolla y Ajo", amount: 1, unit: "uni" },
-            { name: "Pimentón", amount: 1, unit: "cdita" }
-        ],
-        steps: [
-            { title: "Sofrito", desc: "Sofreír cebolla y ajo. Añadir pimentón y espinacas." },
-            { title: "Guisar", desc: "Añadir garbanzos y cubrir con agua/caldo. Cocer 15 min." },
-            { title: "Bacalao", desc: "Añadir bacalao los últimos 5 min. Servir con huevo picado." }
-        ]
-    },
-    {
-        id: 31,
-        title: "Marmitako de Bonito",
-        family: "pescados",
-        occasion: ["comida", "verano", "cuchara"],
-        time: 45,
-        difficulty: "Media",
-        servings: 4,
-        origin: "País Vasco",
-        searchKeywords: ["bonito", "atun", "patata", "guiso"],
-        image: "assets/fotos_recetas/marmitako_de_bonito .png",
-        ingredients: [
-            { name: "Bonito fresco (tacos)", amount: 600, unit: "g" },
-            { name: "Patatas", amount: 1, unit: "kg" },
-            { name: "Pimiento verde", amount: 2, unit: "uni" },
-            { name: "Cebolla", amount: 1, unit: "uni" },
-            { name: "Tomate", amount: 2, unit: "uni" },
-            { name: "Caldo de pescado", amount: 1, unit: "l" },
-            { name: "Carne pimiento choricero", amount: 1, unit: "cda" }
-        ],
-        steps: [
-            { title: "Sofreír", desc: "Pochar cebolla y pimientos. Añadir patatas 'chascadas' (rotas) y sofreír." },
-            { title: "Cocer", desc: "Añadir carne de pimiento choricero y caldo. Cocer 20 min hasta patata tierna." },
-            { title: "Bonito", desc: "Apagar el fuego. Echar los tacos de bonito y dejar que se hagan con el calor residual (2 min)." }
         ]
     },
     {
@@ -579,33 +254,6 @@ const recipesData = [
             { title: "Sellar", desc: "Salpimentar y enharinar la carne. Sellar en olla con aceite fuerte. Reservar." },
             { title: "Verduras", desc: "En el mismo aceite, pochar verduras troceadas." },
             { title: "Guisar", desc: "Volver a meter carne, añadir vino (reducir alcohol) y caldo. Cocer a fuego lento 2h hasta que se deshaga." }
-        ]
-    },
-    {
-        id: 22,
-        title: "Judías Pintas con Arroz",
-        family: "carnes",
-        occasion: ["comida", "invierno", "cuchara"],
-        time: 75,
-        difficulty: "Media",
-        servings: 4,
-        origin: "Nacional",
-        searchKeywords: ["legumbre", "guiso", "arroz", "chorizo"],
-        image: "assets/fotos_recetas/judias_pintas_con_arroz.png",
-        ingredients: [
-            { name: "Judías pintas (remojo 12h)", amount: 400, unit: "g" },
-            { name: "Arroz redondo", amount: 100, unit: "g" },
-            { name: "Chorizo", amount: 1, unit: "uni" },
-            { name: "Panceta", amount: 150, unit: "g" },
-            { name: "Cebolla", amount: 1, unit: "uni" },
-            { name: "Ajo", amount: 2, unit: "dientes" },
-            { name: "Pimentón dulce", amount: 1, unit: "cdita" },
-            { name: "Laurel", amount: 1, unit: "hoja" }
-        ],
-        steps: [
-            { title: "Cocer Judías", desc: "Cocer las judías con el chorizo, panceta, ajo, cebolla y laurel en agua fría. Unas 2 horas o 30 min en olla rápida." },
-            { title: "Sofrito", desc: "Retirar la cebolla y ajo cocidos, triturarlos con un poco de caldo y devolver a la olla. Si se quiere, hacer un sofrito de pimentón aparte." },
-            { title: "Arroz", desc: "Cuando las judías estén tiernas, añadir el arroz y cocer 15-18 minutos más hasta que esté en su punto. Dejar reposar." }
         ]
     },
 
@@ -687,7 +335,7 @@ const recipesData = [
     // --- PASTAS (Fideuá y Canelones) ---
     {
         id: 14,
-        title: "Fideuá Tradicional",
+        title: "Fideuá de Gandía",
         family: "pastas",
         occasion: ["comida", "domingo", "verano"],
         time: 50,
@@ -709,58 +357,6 @@ const recipesData = [
             { title: "Base", desc: "Sofreír rape y tomate. Añadir pimentón." },
             { title: "Fideos", desc: "Añadir fideos y sofreír bien de caldo." },
             { title: "Cocción", desc: "Cocer hasta que el fideo absorba el caldo y se levante. (Horno opcional al final)." }
-        ]
-    },
-    {
-        id: 33,
-        title: "Fideuá del Senyoret",
-        family: "pastas",
-        occasion: ["comida", "domingo", "amigos"],
-        time: 45,
-        difficulty: "Fácil",
-        servings: 4,
-        origin: "Valencia",
-        searchKeywords: ["fideo gordo", "marisco pelado", "gambones"],
-        image: "assets/fotos_recetas/fideuá_del-senyoret.png",
-        ingredients: [
-            { name: "Fideo gordo", amount: 300, unit: "g" },
-            { name: "Gambones", amount: 8, unit: "uni" },
-            { name: "Mejillones (sin cáscara)", amount: 150, unit: "g" },
-            { name: "Camarones pelados", amount: 100, unit: "g" },
-            { name: "Anillas de calamar", amount: 150, unit: "g" },
-            { name: "Sepia", amount: 1, unit: "media" },
-            { name: "Caldo de pescado", amount: 600, unit: "ml" },
-            { name: "Ñora y Ajo", amount: 1, unit: "pizca" }
-        ],
-        steps: [
-            { title: "Caldo Express", desc: "Hacer un caldo con las cabezas y cáscaras de los gambones. Colar y reservar (ratio 2:1 caldo:pasta)." },
-            { title: "Sofrito", desc: "Dorar ajo y ñora. Añadir el marisco limpio (gambas, calamar, sepia, mejillones) y rehogar." },
-            { title: "Cocer", desc: "Añadir el caldo de gambas caliente. Hervir, ajustar sal/azafrán y echar los fideos. Cocinar hasta que estén en su punto." }
-        ]
-    },
-    {
-        id: 34,
-        title: "Fideuá Exprés de Sepia",
-        family: "pastas",
-        occasion: ["comida", "rápida", "diario"],
-        time: 20,
-        difficulty: "Fácil",
-        servings: 4,
-        origin: "Mediterráneo",
-        searchKeywords: ["sepia", "fideo fino", "cabellin", "all i oli"],
-        image: "assets/fotos_recetas/fideuá_exprés_de_sepia.png",
-        ingredients: [
-            { name: "Sepia limpia", amount: 600, unit: "g" },
-            { name: "Fideo cabellín", amount: 300, unit: "g" },
-            { name: "Caldo de pescado/fumet", amount: 600, unit: "ml" },
-            { name: "Tomate concentrado", amount: 20, unit: "g" },
-            { name: "Ajo", amount: 2, unit: "dientes" },
-            { name: "Aceite de oliva", amount: 20, unit: "ml" }
-        ],
-        steps: [
-            { title: "Preparar Sepia", desc: "Limpiar sepia: separar tentáculos y aletas, cortar cuerpo en tiras y luego en trozos. Saltear en aceite hasta dorar." },
-            { title: "Sofrito y Fideos", desc: "Rehogar ajo, añadir tomate concentrado y mezclar. Añadir los fideos (previamente tostados al horno opcionalmente) y mezclar con la sepia." },
-            { title: "Cocer y Reposar", desc: "Añadir caldo caliente. Cocer a fuego vivo (aprox 6 min). Apagar y dejar reposar para que los fideos se 'ricen'." }
         ]
     },
     {
@@ -861,178 +457,795 @@ const recipesData = [
             { title: "Enfriar", desc: "Dejar enfriar y espolvorear canela en polvo." }
         ]
     },
-
-    // --- DESAYUNOS ---
     {
-        id: 40,
-        title: "Churros con Chocolate",
-        family: "desayunos",
-        occasion: ["desayuno", "merienda", "domingo"],
-        time: 40,
+        id: 19,
+        title: "Fideuá Exprés de Sepia",
+        family: "pastas",
+        occasion: ["comida", "domingo", "verano", "express"],
+        time: 30,
+        difficulty: "Fácil",
+        servings: 4,
+        origin: "Mediterráneo",
+        searchKeywords: ["fideo", "sepia", "caldo", "rápido"],
+        image: "assets/fotos_recetas/fideuá_exprés_de_sepia.png",
+        ingredients: [
+            { name: "Sepia limpia", amount: 600, unit: "g" },
+            { name: "Fideo cabellín", amount: 300, unit: "g" },
+            { name: "Caldo de pescado/fumet", amount: 600, unit: "ml" },
+            { name: "Dientes de ajo", amount: 2, unit: "uni" },
+            { name: "Tomate concentrado", amount: 20, unit: "g" },
+            { name: "Aceite de oliva virgen extra", amount: 20, unit: "ml" }
+        ],
+        steps: [
+            { title: "Sofrito", desc: "Rehogar ajos troceados en paella con aceite. Añadir tomate concentrado, mezclar con el caldo y calentar al mínimo." },
+            { title: "Sepia", desc: "Limpiar sepia, trocear cuerpo y tentáculos. Saltear en aceite hasta dorar." },
+            { title: "Fideos", desc: "Añadir fideos previamente tostados (horno). Mezclar con sepia y añadir caldo caliente." },
+            { title: "Cocción", desc: "Cocer a fuego vivo el tiempo del fabricante (aprox 6 min). Reposar hasta que los fideos se ricen hacia arriba." }
+        ]
+    },
+    {
+        id: 20,
+        title: "Fideuá del Senyoret",
+        family: "pastas",
+        occasion: ["comida", "domingo", "lujo"],
+        time: 50,
+        difficulty: "Media",
+        servings: 4,
+        origin: "Alicante/Valencia",
+        searchKeywords: ["marisco", "gambones", "mejillones", "señoret"],
+        image: "assets/fotos_recetas/fideuá_del-senyoret.png",
+        ingredients: [
+            { name: "Fideo gordo", amount: 300, unit: "g" },
+            { name: "Gambones", amount: 8, unit: "uni" },
+            { name: "Mejillones (sin cáscara)", amount: 150, unit: "g" },
+            { name: "Camarones pelados", amount: 100, unit: "g" },
+            { name: "Anillas calamar / Sepia", amount: 150, unit: "g" },
+            { name: "Agua/Caldo", amount: 600, unit: "ml" },
+            { name: "Aja y Ñora", amount: 1, unit: "uni" },
+            { name: "Azafrán", amount: 1, unit: "pizca" }
+        ],
+        steps: [
+            { title: "Fumet", desc: "Pelar gambones. Hacer caldo con cabezas y colas (mitad agua, mitad caldo caldero si hay)." },
+            { title: "Sofrito", desc: "Dorar ajo y ñora. Rehogar cuerpos de gambones, camarones, calamares y mejillones." },
+            { title: "Cocer", desc: "Añadir el caldo colado hirviendo. Ajustar sal y azafrán." },
+            { title: "Fideos", desc: "Echar fideos gordos y cocer hasta secar." }
+        ]
+    },
+
+
+    // --- NUEVAS TAPAS ---
+    {
+        id: 21,
+        title: "Tigres (Mejillones)",
+        family: "tapas",
+        occasion: ["tapas", "aperitivo"],
+        time: 45,
+        difficulty: "Media",
+        servings: 6,
+        origin: "Nacional/Galicia",
+        searchKeywords: ["mejillón", "bechamel", "picante", "frito"],
+        image: "assets/fotos_recetas/tigres_mejillones_rellenos.png",
+        ingredients: [
+            { name: "Mejillones frescos", amount: 1, unit: "kg" },
+            { name: "Cebolla", amount: 1, unit: "uni" },
+            { name: "Ajo", amount: 1, unit: "diente" },
+            { name: "Tomate frito", amount: 2, unit: "cda" },
+            { name: "Harina", amount: 50, unit: "g" },
+            { name: "Leche", amount: 400, unit: "ml" },
+            { name: "Guindilla (opcional)", amount: 1, unit: "uni" },
+            { name: "Huevo y Pan rallado", amount: 100, unit: "g" }
+        ],
+        steps: [
+            { title: "Mejillones", desc: "Cocer los mejillones al vapor. Picar la carne muy fina y guardar una concha de cada uno bien limpia." },
+            { title: "Relleno", desc: "Sofreír cebolla, ajo y guindilla. Añadir la carne del mejillón y el tomate. Hacer una bechamel espesa con la harina y leche." },
+            { title: "Rellenar", desc: "Rellenar las conchas con la masa. Dejar enfriar." },
+            { title: "Freír", desc: "Pasar por huevo y pan rallado. Freír en aceite caliente." }
+        ]
+    },
+    {
+        id: 22,
+        title: "Boquerones en Vinagre",
+        family: "tapas",
+        occasion: ["tapas", "aperitivo", "verano"],
+        time: 24, // "horas"
+        difficulty: "Media",
+        servings: 4,
+        origin: "Madrid/Andalucía",
+        searchKeywords: ["pescado", "vinagre", "aperitivo"],
+        image: "assets/fotos_recetas/boquerones_en_vinagre.png",
+        ingredients: [
+            { name: "Boquerones frescos", amount: 500, unit: "g" },
+            { name: "Vinagre de vino blanco", amount: 300, unit: "ml" },
+            { name: "Agua", amount: 100, unit: "ml" },
+            { name: "Sal", amount: 1, unit: "cda" },
+            { name: "Ajo y Perejil", amount: 1, unit: "puñado" },
+            { name: "Aceite de oliva virgen extra", amount: 100, unit: "ml" }
+        ],
+        steps: [
+            { title: "Limpiar", desc: "Limpiar boquerones quitando cabeza y espina. Lavar muy bien en agua y hielo para desangrar." },
+            { title: "Congelar", desc: "Por seguridad (anisakis), congelar 24h min." },
+            { title: "Marinar", desc: "Sumergir en vinagre, agua y sal durante unas 6-8 horas hasta que estén blancos." },
+            { title: "Aliñar", desc: "Escurrir y cubrir con abundante aceite, ajo picado y perejil." }
+        ]
+    },
+    {
+        id: 23,
+        title: "Patatas Bravas",
+        family: "only_vegetal",
+        occasion: ["tapas", "cerveza"],
+        time: 30,
+        difficulty: "Fácil",
+        servings: 4,
+        origin: "Madrid",
+        searchKeywords: ["patata", "salsa brava", "picante"],
+        image: "assets/fotos_recetas/patatas_bravas.png",
+        ingredients: [
+            { name: "Patatas", amount: 4, unit: "uni" },
+            { name: "Aceite para freír", amount: 500, unit: "ml" },
+            { name: "Pimentón dulce y picante", amount: 2, unit: "cda" },
+            { name: "Harina", amount: 1, unit: "cda" },
+            { name: "Caldo de carne/pollo", amount: 200, unit: "ml" },
+            { name: "Vinagre", amount: 1, unit: "chorrito" }
+        ],
+        steps: [
+            { title: "Salsa Brava", desc: "Sofreír pimentones con harina en aceite (cuidado no quemar). Añadir caldo poco a poco hasta espesar. Toque de vinagre." },
+            { title: "Patatas", desc: "Cortar patatas en cubos irregulares. Freír en dos tiempos: primero suave para pochar, luego fuerte para dorar." },
+            { title: "Servir", desc: "Bañar las patatas con la salsa caliente." }
+        ]
+    },
+    {
+        id: 24,
+        title: "Calamares a la Romana",
+        family: "tapas",
+        occasion: ["tapas", "comida", "bocadillo"],
+        time: 20,
         difficulty: "Media",
         servings: 4,
         origin: "Nacional",
-        searchKeywords: ["churro", "chocolate", "frito", "masa"],
-        image: "https://images.unsplash.com/photo-1624300603538-1207400f4116?q=80&w=1000&auto=format&fit=crop",
+        searchKeywords: ["calamar", "rebozado", "frito"],
+        image: "assets/fotos_recetas/calamares_a_la_romana.png",
         ingredients: [
-            { name: "Harina de fuerza", amount: 250, unit: "g" },
-            { name: "Agua", amount: 250, unit: "ml" },
-            { name: "Sal", amount: 1, unit: "cdita" },
-            { name: "Aceite suave (freír)", amount: 1, unit: "l" },
-            { name: "Chocolate a la taza", amount: 200, unit: "g" },
-            { name: "Leche", amount: 500, unit: "ml" }
+            { name: "Anillas de calamar", amount: 500, unit: "g" },
+            { name: "Harina de trigo", amount: 100, unit: "g" },
+            { name: "Huevo", amount: 2, unit: "uni" },
+            { name: "Agua con gas o Cerveza", amount: 50, unit: "ml" },
+            { name: "Sal y Limón", amount: 1, unit: "uni" },
+            { name: "Aceite para freír", amount: 500, unit: "ml" }
         ],
         steps: [
-            { title: "Masa", desc: "Calentar agua con sal hasta hervir. Echar la harina de golpe y remover fuerte hasta que se despegue." },
-            { title: "Formar", desc: "Meter la masa en churrera (importante para que no estallen) y hacer tiras." },
-            { title: "Freír", desc: "Freír en aceite muy caliente. Servir con chocolate caliente espeso." }
+            { title: "Masa Orly", desc: "Mezclar harina, huevo, sal y un chorro de agua con gas/cerveza fría para hacer una pasta." },
+            { title: "Rebozar", desc: "Pasar las anillas limpias y secas por la masa." },
+            { title: "Freír", desc: "Freír en aceite muy caliente por tandas. Servir con limón." }
+        ]
+    },
+    {
+        id: 25,
+        title: "Ensaladilla Rusa",
+        family: "tapas",
+        occasion: ["tapas", "entrante", "verano", "comida"],
+        time: 40,
+        difficulty: "Fácil",
+        servings: 6,
+        origin: "Nacional",
+        searchKeywords: ["patata", "mayonesa", "atún", "huevo"],
+        image: "assets/fotos_recetas/ensaladilla_rusa.png",
+        ingredients: [
+            { name: "Patatas", amount: 4, unit: "uni" },
+            { name: "Zanahorias", amount: 2, unit: "uni" },
+            { name: "Huevos", amount: 3, unit: "uni" },
+            { name: "Atún en aceite", amount: 3, unit: "latas" },
+            { name: "Guisantes (opcional)", amount: 100, unit: "g" },
+            { name: "Aceitunas", amount: 50, unit: "g" },
+            { name: "Mayonesa", amount: 300, unit: "g" }
+        ],
+        steps: [
+            { title: "Cocer", desc: "Cocer patatas y zanahorias con piel. Cocer huevos 10 min. Pelar y picar todo en dados pequeños." },
+            { title: "Mezclar", desc: "Mezclar la verdura con el huevo, atún desmigado y aceitunas picadas." },
+            { title: "Mayonesa", desc: "Incorporar mayonesa abundante y mezclar con cuidado. refrigerar." }
+        ]
+    },
+    {
+        id: 26,
+        title: "Empanada Gallega",
+        family: "tapas",
+        occasion: ["comida", "merienda", "excursión"],
+        time: 60,
+        difficulty: "Media",
+        servings: 8,
+        origin: "Galicia",
+        searchKeywords: ["atún", "masa", "horno", "pimiento"],
+        image: "assets/fotos_recetas/empanada_gallega.png",
+        ingredients: [
+            { name: "Masa de empanada", amount: 2, unit: "láminas" },
+            { name: "Atún/Bonito en aceite", amount: 400, unit: "g" },
+            { name: "Cebolla", amount: 2, unit: "uni" },
+            { name: "Pimiento rojo y verde", amount: 1, unit: "uni" },
+            { name: "Tomate frito", amount: 100, unit: "g" },
+            { name: "Huevo (pintar)", amount: 1, unit: "uni" }
+        ],
+        steps: [
+            { title: "Zarangollo", desc: "Pochar cebolla y pimientos despacio. Añadir tomate y al final el atún escurrido." },
+            { title: "Montar", desc: "Colocar una base de masa, extender el relleno (frío) y tapar con la otra masa. Cerrar bordes." },
+            { title: "Hornear", desc: "Pintar con huevo, hacer agujero central (chimenea) y hornear a 200ºC unos 30-40 min." }
+        ]
+    },
+    {
+        id: 27,
+        title: "Pimientos de Padrón",
+        family: "only_vegetal",
+        occasion: ["tapas", "guarnición"],
+        time: 10,
+        difficulty: "Fácil",
+        servings: 4,
+        origin: "Galicia",
+        searchKeywords: ["pimiento", "verde", "frito"],
+        image: "assets/fotos_recetas/pimientos_de_padrón.png",
+        ingredients: [
+            { name: "Pimientos de Padrón", amount: 400, unit: "g" },
+            { name: "Aceite de oliva", amount: 100, unit: "ml" },
+            { name: "Sal gorda/Escamas", amount: 1, unit: "pizca" }
+        ],
+        steps: [
+            { title: "Lavar", desc: "Lavar y secar muy bien los pimientos (para que no salten)." },
+            { title: "Freír", desc: "Freír en aceite caliente pero no humeante, dando vueltas hasta que la piel se arrugue y tueste." },
+            { title: "Sal", desc: "Sacar y echar sal gorda inmediatamente. Unos pican y otros no." }
+        ]
+    },
+
+
+    // --- PLATOS DE CUCHARA ---
+    {
+        id: 28,
+        title: "Lentejas con Chorizo",
+        family: "carnes",
+        occasion: ["comida", "invierno", "tupper"],
+        time: 50,
+        difficulty: "Fácil",
+        servings: 4,
+        origin: "Nacional",
+        searchKeywords: ["legumbre", "chorizo", "guiso"],
+        image: "assets/fotos_recetas/lentejas_con_chorizo.png",
+        ingredients: [
+            { name: "Lentejas pardinas", amount: 350, unit: "g" },
+            { name: "Chorizo fresco", amount: 1, unit: "uni" },
+            { name: "Zanahoria", amount: 1, unit: "uni" },
+            { name: "Cebolla", amount: 1, unit: "uni" },
+            { name: "Patata", amount: 1, unit: "uni" },
+            { name: "Ajo y Laurel", amount: 1, unit: "ud" },
+            { name: "Pimentón dulce", amount: 1, unit: "cdita" }
+        ],
+        steps: [
+            { title: "Todo en crudo", desc: "Poner todos los ingredientes en la olla cubiertos de agua fría (salvo la sal)." },
+            { title: "Cocer", desc: "Llevar a ebullición, bajar el fuego y cocer suavemente unos 40-50 min hasta que estén tiernas." },
+            { title: "Sofrito (opcional)", desc: "Se puede hacer un refrito de ajo y pimentón al final para dar brillo." }
+        ]
+    },
+    {
+        id: 29,
+        title: "Judías Pintas con Arroz",
+        family: "carnes",
+        occasion: ["comida", "invierno"],
+        time: 90,
+        difficulty: "Media",
+        servings: 4,
+        origin: "Nacional",
+        searchKeywords: ["alubias", "arroz", "morcilla", "guiso"],
+        image: "assets/fotos_recetas/judias_pintas_con_arroz.png",
+        ingredients: [
+            { name: "Judías pintas", amount: 300, unit: "g" },
+            { name: "Arroz", amount: 50, unit: "g" },
+            { name: "Compango (chorizo/morcilla)", amount: 1, unit: "pack" },
+            { name: "Cebolla y Ajo", amount: 1, unit: "ud" },
+            { name: "Laurel", amount: 1, unit: "hoja" }
+        ],
+        steps: [
+            { title: "Remojo", desc: "Remojar judías la noche anterior." },
+            { title: "Estofar", desc: "Cocer judías con las carnes a fuego lento (aprox 1h 30m) asustándolas con agua fría." },
+            { title: "Arroz", desc: "Cuando estén tiernas, añadir el arroz y cocer 15 min más para trabar el caldo." }
+        ]
+    },
+    {
+        id: 30,
+        title: "Cocido Madrileño",
+        family: "carnes",
+        occasion: ["comida", "domingo", "invierno"],
+        time: 180,
+        difficulty: "Media",
+        servings: 6,
+        origin: "Madrid",
+        searchKeywords: ["garbanzos", "sopa", "carne", "vuelcos"],
+        image: "assets/fotos_recetas/cocido_madrileño.png",
+        ingredients: [
+            { name: "Garbanzos", amount: 500, unit: "g" },
+            { name: "Morcillo de ternera", amount: 500, unit: "g" },
+            { name: "Tocino fresco", amount: 200, unit: "g" },
+            { name: "Hueso de jamón y rodilla", amount: 2, unit: "ud" },
+            { name: "Gallina/Pollo", amount: 1, unit: "cuarto" },
+            { name: "Chorizo y Morcilla", amount: 1, unit: "ud" },
+            { name: "Repollo y Patata", amount: 1, unit: "ud" },
+            { name: "Fideos (sopa)", amount: 150, unit: "g" }
+        ],
+        steps: [
+            { title: "Carnes y Garbanzos", desc: "Cocer carnes y huesos. Cuando hierva, añadir garbanzos (en malla si se quiere). Cocer 2h." },
+            { title: "Verduras", desc: "Añadir patata y repollo (el repollo mejor cocerlo aparte con chorizo y morcilla)." },
+            { title: "Sopa", desc: "Colar el caldo y cocer los fideos." },
+            { title: "Tres Vuelcos", desc: "Servir 1º Sopa, 2º Garbanzos y Verdura, 3º Carnes." }
+        ]
+    },
+    {
+        id: 31,
+        title: "Potaje de Garbanzos",
+        family: "only_vegetal",
+        occasion: ["comida", "cuaresma", "semana santa"],
+        time: 90,
+        difficulty: "Media",
+        servings: 4,
+        origin: "Nacional",
+        searchKeywords: ["espinacas", "bacalao", "huevo"],
+        image: "assets/fotos_recetas/potaje_de_garbanzos.png",
+        ingredients: [
+            { name: "Garbanzos", amount: 400, unit: "g" },
+            { name: "Espinacas frescas", amount: 300, unit: "g" },
+            { name: "Bacalao desalado", amount: 200, unit: "g" },
+            { name: "Huevo duro", amount: 2, unit: "uni" },
+            { name: "Cebolla y Ajo", amount: 1, unit: "ud" },
+            { name: "Pimentón", amount: 1, unit: "cda" }
+        ],
+        steps: [
+            { title: "Cocer", desc: "Cocer garbanzos (remojados) con laurel y cebolla." },
+            { title: "Sofrito", desc: "Hacer sofrito de ajo y pimentón. Añadir a la olla." },
+            { title: "Espinacas y Bacalao", desc: "A falta de 10 min, añadir espinacas y bacalao desmigado. Reposar con huevo duro picado." }
+        ]
+    },
+    {
+        id: 32,
+        title: "Marmitako de Bonito",
+        family: "pescados",
+        occasion: ["comida", "verano", "norte"],
+        time: 45,
+        difficulty: "Media",
+        servings: 4,
+        origin: "País Vasco",
+        searchKeywords: ["atún", "bonito", "patata", "guiso"],
+        image: "assets/fotos_recetas/marmitako_de_bonito .png",
+        ingredients: [
+            { name: "Bonito del Norte", amount: 600, unit: "g" },
+            { name: "Patatas", amount: 1, unit: "kg" },
+            { name: "Pimiento verde y choricero", amount: 1, unit: "ud" },
+            { name: "Cebolla", amount: 1, unit: "uni" },
+            { name: "Caldo de pescado", amount: 1, unit: "l" },
+            { name: "Guindilla (opcional)", amount: 1, unit: "uni" }
+        ],
+        steps: [
+            { title: "Patatas", desc: "Pochar cebolla y pimiento. Añadir carne de pimiento choricero. Chascar patatas y rehogar." },
+            { title: "Cocer", desc: "Cubrir con caldo y cocer hasta que la patata esté tierna." },
+            { title: "Bonito", desc: "Apagar el fuego. Echar el bonito en dados y dejar que se haga con el calor residual (para que no se seque)." }
+        ]
+    },
+
+
+    // --- ARROCES Y GUISOS VARIADOS ---
+    {
+        id: 33,
+        title: "Arroz al Horno",
+        family: "arroces",
+        occasion: ["comida", "domingo", "aprovechamiento"],
+        time: 60,
+        difficulty: "Media",
+        servings: 6,
+        origin: "Valencia",
+        searchKeywords: ["costillas", "garbanzos", "morcilla", "cazuela"],
+        image: "assets/fotos_recetas/arroz_al_horno.png",
+        ingredients: [
+            { name: "Arroz bomba", amount: 400, unit: "g" },
+            { name: "Costillas de cerdo", amount: 300, unit: "g" },
+            { name: "Morcilla de cebolla", amount: 2, unit: "uni" },
+            { name: "Garbanzos cocidos", amount: 200, unit: "g" },
+            { name: "Patata y Tomate", amount: 1, unit: "ud" },
+            { name: "Cabeza de ajos", amount: 1, unit: "uni" },
+            { name: "Caldo de cocido", amount: 800, unit: "ml" }
+        ],
+        steps: [
+            { title: "Sofreír", desc: "Dorar costillas, panceta y morcillas. Reservar. Sofreír arroz y garbanzos." },
+            { title: "Montar", desc: "Poner todo en cazuela de barro. Colocar la cabeza de ajos en medio, rodajas de patata y tomate." },
+            { title: "Hornear", desc: "Añadir caldo hirviendo y hornear a 220ºC durante 20-25 min." }
+        ]
+    },
+    {
+        id: 34,
+        title: "Arroz Caldoso con Bogavante",
+        family: "arroces",
+        occasion: ["comida", "lujo", "celebración"],
+        time: 45,
+        difficulty: "Alta",
+        servings: 4,
+        origin: "Mediterráneo",
+        searchKeywords: ["bogavante", "marisco", "caldo"],
+        image: "assets/fotos_recetas/arroz_caldoso_con_bogavante.png",
+        ingredients: [
+            { name: "Arroz bomba", amount: 300, unit: "g" },
+            { name: "Bogavante", amount: 2, unit: "uni" },
+            { name: "Gambas", amount: 8, unit: "uni" },
+            { name: "Fumet de pescado", amount: 1.5, unit: "l" },
+            { name: "Ñora y Tomate", amount: 1, unit: "ud" },
+            { name: "Brandy", amount: 1, unit: "copita" }
+        ],
+        steps: [
+            { title: "Bogavante", desc: "Trocear bogavante (aprovechar jugos de la cabeza). Sofreír y reservar." },
+            { title: "Sofrito", desc: "Hacer un sofrito intenso con ñora, tomate y las cabezas de las gambas. Flambear con brandy." },
+            { title: "Cocer", desc: "Añadir arroz, caldo (es caldoso, necesita más proporción) y cocinar 15 min. Añadir bogavante al final." }
+        ]
+    },
+    {
+        id: 35,
+        title: "Migas de Pastor",
+        family: "carnes",
+        occasion: ["comida", "invierno", "campo"],
+        time: 40,
+        difficulty: "Media",
+        servings: 4,
+        origin: "Castilla/Extremadura",
+        searchKeywords: ["pan", "chorizo", "panceta", "uvas"],
+        image: "assets/fotos_recetas/migas_de_pastor.png",
+        ingredients: [
+            { name: "Pan de hogaza (duro)", amount: 500, unit: "g" },
+            { name: "Panceta y Chorizo", amount: 300, unit: "g" },
+            { name: "Ajos", amount: 1, unit: "cabeza" },
+            { name: "Agua con sal (humedecer)", amount: 100, unit: "ml" },
+            { name: "Uvas (acompañar)", amount: 1, unit: "racimo" }
+        ],
+        steps: [
+            { title: "Humedecer", desc: "Cortar pan y humedecer ligeramente con agua y sal la noche antes (tapar con paño)." },
+            { title: "Freír", desc: "Freír ajos, panceta y chorizo. Retirar. En esa grasa, echar el pan." },
+            { title: "Dar vueltas", desc: "Remover constantemente a fuego lento hasta que se suelten y doren (30 min). Servir con uvas." }
+        ]
+    },
+    {
+        id: 36,
+        title: "Morteruelo Conquense",
+        family: "carnes",
+        occasion: ["entrante", "invierno", "tapas"],
+        time: 120,
+        difficulty: "Media",
+        servings: 6,
+        origin: "Cuenca",
+        searchKeywords: ["hígado", "caza", "paté", "pan"],
+        image: "assets/fotos_recetas/morteruelo.png",
+        ingredients: [
+            { name: "Hígado de cerdo", amount: 500, unit: "g" },
+            { name: "Carne de caza/gallina", amount: 500, unit: "g" },
+            { name: "Pan rallado/miga", amount: 200, unit: "g" },
+            { name: "Especias (clavo, canela, alcaravea)", amount: 1, unit: "pizca" },
+            { name: "Piñones (opcional)", amount: 50, unit: "g" }
+        ],
+        steps: [
+            { title: "Cocer", desc: "Cocer todas las carnes hasta que se deshagan. Deshuesar y picar muy fino (textura paté)." },
+            { title: "Guisar", desc: "En sartén con el caldo de cocción y especias, cocer la pasta de carne. Añadir pan para espesar." },
+            { title: "Enfriar", desc: "Se come tibio o frío, untado en pan." }
+        ]
+    },
+    {
+        id: 37,
+        title: "Albóndigas en Salsa",
+        family: "carnes",
+        occasion: ["comida", "tupper", "niños"],
+        time: 60,
+        difficulty: "Media",
+        servings: 4,
+        origin: "Nacional",
+        searchKeywords: ["carne picada", "salsa", "guiso"],
+        image: "assets/fotos_recetas/albóndigas_en_salsa.png",
+        ingredients: [
+            { name: "Carne picada mixta", amount: 500, unit: "g" },
+            { name: "Miga de pan con leche", amount: 1, unit: "rebanada" },
+            { name: "Huevo", amount: 1, unit: "uni" },
+            { name: "Cebolla y Vino blanco", amount: 1, unit: "ud" },
+            { name: "Caldo de carne", amount: 500, unit: "ml" },
+            { name: "Harina (rebozar)", amount: 50, unit: "g" }
+        ],
+        steps: [
+            { title: "Masa", desc: "Mezclar carne, huevo, pan mojado en leche, ajo y perejil. Formar bolas y enharinar." },
+            { title: "Freír", desc: "Dorar albóndigas y reservar. En ese aceite pochar cebolla." },
+            { title: "Guisar", desc: "Añadir vino, caldo y las albóndigas. Cocer 20 min hasta que la salsa trabe." }
+        ]
+    },
+    {
+        id: 38,
+        title: "Torreznos de Soria",
+        family: "tapas",
+        occasion: ["tapas", "aperitivo"],
+        time: 45,
+        difficulty: "Alta",
+        servings: 4,
+        origin: "Soria",
+        searchKeywords: ["panceta", "frito", "crujiente"],
+        image: "assets/fotos_recetas/torreznos_de_soria_crujientes.png",
+        ingredients: [
+            { name: "Panceta de Soria (curada)", amount: 500, unit: "g" },
+            { name: "Aceite de girasol/oliva", amount: 1, unit: "l" }
+        ],
+        steps: [
+            { title: "Secar", desc: "La piel debe estar muy seca. Cortar en tiras de 2 cm." },
+            { title: "Confitar", desc: "Poner en sartén con aceite frío (piel abajo) a fuego muy lento 30 min hasta que aparezcan burbujas." },
+            { title: "Subir fuego", desc: "Subir el fuego al máximo para que la piel explote y se llene de burbujas (la corteza)." }
+        ]
+    },
+
+    // --- POSTRES Y DESAYUNOS ---
+    {
+        id: 39,
+        title: "Tarta de Santiago",
+        family: "postres",
+        occasion: ["postre", "merienda"],
+        time: 50,
+        difficulty: "Fácil",
+        servings: 8,
+        origin: "Galicia",
+        searchKeywords: ["almendra", "sin gluten", "azúcar glas"],
+        image: "assets/fotos_recetas/tarta_de_santiago.png",
+        ingredients: [
+            { name: "Almendra molida", amount: 250, unit: "g" },
+            { name: "Azúcar", amount: 250, unit: "g" },
+            { name: "Huevos L", amount: 5, unit: "uni" },
+            { name: "Ralladura de limón", amount: 1, unit: "uni" },
+            { name: "Canela", amount: 1, unit: "cdita" }
+        ],
+        steps: [
+            { title: "Mezclar", desc: "Mezclar azúcar y huevos (no batir en exceso). Añadir almendra, canela y limón." },
+            { title: "Hornear", desc: "Molde engrasado. Horno 180ºC durante 30-35 min." },
+            { title: "Decorar", desc: "Poner cruz de Santiago y espolvorear azúcar glas." }
+        ]
+    },
+    {
+        id: 40,
+        title: "Bizcocho de Yogur",
+        family: "postres",
+        occasion: ["desayuno", "merienda"],
+        time: 45,
+        difficulty: "Fácil",
+        servings: 8,
+        origin: "Nacional",
+        searchKeywords: ["yogur", "limón", "esponjoso"],
+        image: "assets/fotos_recetas/bizcocho_de_yogur.png",
+        ingredients: [
+            { name: "Yogur natural (medida)", amount: 1, unit: "uni" },
+            { name: "Huevos", amount: 3, unit: "uni" },
+            { name: "Azúcar", amount: 2, unit: "medidas" },
+            { name: "Harina", amount: 3, unit: "medidas" },
+            { name: "Aceite", amount: 1, unit: "medida" },
+            { name: "Levadura Royal", amount: 1, unit: "sobre" }
+        ],
+        steps: [
+            { title: "Batir", desc: "Batir huevos con azúcar. Añadir yogur y aceite." },
+            { title: "Secos", desc: "Tamizar harina y levadura. Incorporar a la mezcla." },
+            { title: "Hornear", desc: "Horno 180ºC calor arriba y abajo, unos 35-40 min." }
         ]
     },
     {
         id: 41,
         title: "Magdalenas de Yogur",
-        family: "desayunos",
+        family: "postres",
         occasion: ["desayuno", "merienda"],
-        time: 35,
+        time: 25,
         difficulty: "Fácil",
         servings: 12,
-        origin: "Casero",
-        searchKeywords: ["bollo", "yogur", "limon", "esponjoso"],
+        origin: "Nacional",
+        searchKeywords: ["bollería", "casero", "copete"],
         image: "assets/fotos_recetas/magdalenas_de_yogur.png",
         ingredients: [
-            { name: "Huevos", amount: 3, unit: "uni" },
+            { name: "Huevo", amount: 3, unit: "uni" },
             { name: "Azúcar", amount: 200, unit: "g" },
-            { name: "Aceite de girasol", amount: 125, unit: "ml" },
-            { name: "Yogur natural", amount: 1, unit: "uni" },
-            { name: "Harina repostería", amount: 220, unit: "g" },
-            { name: "Levadura", amount: 1, unit: "sobre" },
-            { name: "Ralladura de limón", amount: 1, unit: "uni" }
+            { name: "Aceite girasol", amount: 200, unit: "ml" },
+            { name: "Leche/Nata", amount: 50, unit: "ml" },
+            { name: "Harina floja", amount: 350, unit: "g" },
+            { name: "Impulsor", amount: 1, unit: "sobre" }
         ],
         steps: [
-            { title: "Batir", desc: "Batir huevos y azúcar mucho (5 min). Añadir aceite, yogur y ralladura." },
-            { title: "Mezclar", desc: "Incorporar harina y levadura tamizadas con suavidad. Dejar reposar masa 30 min en nevera (truco copete)." },
-            { title: "Hornear", desc: "Llenar moldes 3/4. Horno precalentado 220ºC, bajar a 200ºC al meterlas. 15 min." }
+            { title: "Emulsionar", desc: "Batir huevos y azúcar mucho (blanquear). Añadir líquidos." },
+            { title: "Reposo", desc: "Añadir harina tamizada. Dejar reposar la masa en nevera 1h (truco del copete)." },
+            { title: "Hornear", desc: "Horno muy fuerte (220ºC). Bajar a 200ºC al meterlas. 12-15 min." }
         ]
     },
     {
         id: 42,
-        title: "Bizcocho de Yogur",
+        title: "Pan con Tomate y Jamón",
         family: "desayunos",
-        occasion: ["desayuno", "merienda"],
-        time: 45,
+        occasion: ["desayuno", "cena", "tapa"],
+        time: 5,
         difficulty: "Fácil",
-        servings: 8,
-        origin: "Casero",
-        searchKeywords: ["bizcocho", "yogur", "facil", "123"],
-        image: "assets/fotos_recetas/bizcocho_de_yogur.png",
+        servings: 2,
+        origin: "Cataluña/Nacional",
+        searchKeywords: ["pa amb tomaca", "tostada"],
+        image: "assets/fotos_recetas/pan_con_tomate_y_jamón.png",
         ingredients: [
-            { name: "Yogur natural (medida)", amount: 1, unit: "uni" },
-            { name: "Huevos", amount: 3, unit: "uni" },
-            { name: "Harina (3 medidas yogur)", amount: 375, unit: "g" },
-            { name: "Azúcar (2 medidas yogur)", amount: 250, unit: "g" },
-            { name: "Aceite (1 medida yogur)", amount: 125, unit: "ml" },
-            { name: "Levadura", amount: 1, unit: "sobre" },
-            { name: "Ralladura limón/naranja", amount: 1, unit: "uni" }
+            { name: "Pan de Payés/Hogaza", amount: 2, unit: "rebanadas" },
+            { name: "Tomate de ramallet/maduro", amount: 1, unit: "uni" },
+            { name: "Aceite virgen extra", amount: 1, unit: "chorro" },
+            { name: "Sal y Ajo (opc)", amount: 1, unit: "pizca" },
+            { name: "Jamón Serrano", amount: 100, unit: "g" }
         ],
         steps: [
-            { title: "Mezclar", desc: "Batir huevos con azúcar. Añadir yogur y aceite. Añadir harina y levadura." },
-            { title: "Hornear", desc: "Molde engrasado. Horno 180ºC durante 35-40 min. Pinchar para ver si sale limpio." }
+            { title: "Tostar", desc: "Tostar el pan. Restregar medio ajo (opcional)." },
+            { title: "Tomate", desc: "Restregar el tomate maduro partido por la mitad hasta manchar el pan." },
+            { title: "Aliñar", desc: "Chorro generoso de aceite, sal y cubrir con jamón." }
         ]
     },
     {
         id: 43,
         title: "Tosta Aguacate y Anchoas",
         family: "desayunos",
-        occasion: ["desayuno", "brunch", "saludable"],
+        occasion: ["desayuno", "brunch", "cena"],
         time: 10,
         difficulty: "Fácil",
-        servings: 1,
+        servings: 2,
         origin: "Moderno",
-        searchKeywords: ["tostada", "desayuno saludable", "anchoas"],
+        searchKeywords: ["saludable", "aguacate", "pescado"],
         image: "assets/fotos_recetas/tosta_aguacate_y_anchoas.png",
         ingredients: [
-            { name: "Pan de hogaza tostado", amount: 2, unit: "rebanadas" },
-            { name: "Aguacate maduro", amount: 0.5, unit: "uni" },
-            { name: "Anchoas en aceite", amount: 3, unit: "filetes" },
-            { name: "Tomates cherry", amount: 3, unit: "uni" },
+            { name: "Pan de semillas", amount: 2, unit: "rebanadas" },
+            { name: "Aguacate maduro", amount: 1, unit: "uni" },
+            { name: "Anchoas del Cantábrico", amount: 6, unit: "filetes" },
+            { name: "Tomate cherry", amount: 4, unit: "uni" },
             { name: "Aceite y Pimienta", amount: 1, unit: "pizca" }
         ],
         steps: [
-            { title: "Base", desc: "Tostar el pan. Machacar el aguacate con un tenedor y extender encima." },
-            { title: "Toppings", desc: "Colocar los cherrys partidos y las anchoas encima. Chorrito de aceite y pimienta." }
+            { title: "Base", desc: "Tostar pan. Aplastar aguacate con tenedor con un poco de limón y pimienta." },
+            { title: "Montar", desc: "Untar aguacate. Colocar anchoas encima y decorar con cherrys." }
         ]
     },
     {
         id: 44,
-        title: "Pan con Tomate y Jamón",
+        title: "Smoothie Bowl de Mango",
         family: "desayunos",
-        occasion: ["desayuno", "merienda", "tapas"],
+        occasion: ["desayuno", "verano", "saludable"],
         time: 5,
         difficulty: "Fácil",
         servings: 1,
-        origin: "Cataluña/Nacional",
-        searchKeywords: ["pan tumaca", "desayuno andaluz", "jamon"],
-        image: "assets/fotos_recetas/pan_con_tomate_y_jamón.png",
-        ingredients: [
-            { name: "Pan de mollete o chapata", amount: 2, unit: "rebanadas" },
-            { name: "Tomate maduro (rallar/restregar)", amount: 1, unit: "uni" },
-            { name: "Aceite virgen extra", amount: 1, unit: "buen chorro" },
-            { name: "Jamón Serrano/Ibérico", amount: 50, unit: "g" },
-            { name: "Sal (opcional)", amount: 1, unit: "pizca" }
-        ],
-        steps: [
-            { title: "Tomate", desc: "Tostar el pan. Restregar el tomate partido o rallarlo y ponerlo encima." },
-            { title: "Aceite y Jamón", desc: "Echar un buen chorro de aceite de oliva, pizca de sal y cubrir con el jamón." }
-        ]
-    },
-    {
-        id: 45,
-        title: "Smoothie Bowl de Mango",
-        family: "desayunos",
-        occasion: ["desayuno", "brunch", "saludable"],
-        time: 15,
-        difficulty: "Fácil",
-        servings: 1,
-        origin: "Moderno",
-        searchKeywords: ["batido", "fruta", "bowl", "avena"],
+        origin: "Tropical",
+        searchKeywords: ["fruta", "batido", "yogur"],
         image: "assets/fotos_recetas/smoothie_bowl_de_mango.png",
         ingredients: [
-            { name: "Mango maduro congelado", amount: 1, unit: "uni" },
-            { name: "Plátano", amount: 1, unit: "uni" },
-            { name: "Yogur griego/skyr", amount: 150, unit: "g" },
-            { name: "Semillas de Chía", amount: 1, unit: "cdita" },
-            { name: "Frutos rojos (decorar)", amount: 1, unit: "puñado" },
-            { name: "Cúrcuma (opcional)", amount: 1, unit: "pizca" }
+            { name: "Mango congelado", amount: 150, unit: "g" },
+            { name: "Plátano congelado", amount: 1, unit: "uni" },
+            { name: "Yogur griego/coco", amount: 1, unit: "uni" },
+            { name: "Granola y Fruta fresca", amount: 1, unit: "puñado" }
         ],
         steps: [
-            { title: "Triturar", desc: "Triturar el mango y el plátano con el yogur hasta tener una crema espesa. (Añadir cúrcuma opcional)." },
-            { title: "Bowl", desc: "Servir en un bol. Decorar por encima con la chía y frutas frescas cortadas." }
+            { title: "Triturar", desc: "Batir fruta congelada con el yogur hasta tener textura helado cremoso." },
+            { title: "Decorar", desc: "Servir en bol y decorar con granola, coco rallado o fruta fresca (topping)." }
+        ]
+    },
+
+    {
+        id: 45,
+        title: "Chuletón a la Brasa",
+        family: "carnes",
+        occasion: ["comida", "celebración", "lujo"],
+        time: 45,
+        difficulty: "Media",
+        servings: 2,
+        origin: "Norte de España",
+        searchKeywords: ["carne roja", "buey", "parrilla"],
+        image: "assets/fotos_recetas/chuleton_a_la_brasa.png",
+        ingredients: [
+            { name: "Chuletón de vaca/buey (1kg)", amount: 1, unit: "uni" },
+            { name: "Sal en escamas", amount: 1, unit: "puñado" },
+            { name: "Aceite de oliva", amount: 1, unit: "chorrito" },
+            { name: "Pimientos de piquillo (guarnición)", amount: 1, unit: "lata" }
+        ],
+        steps: [
+            { title: "Temperar", desc: "Sacar la carne de la nevera al menos 2 horas antes para que esté a temperatura ambiente." },
+            { title: "Brasa/Plancha", desc: "Calentar la plancha al máximo. Sellar la carne 3-4 minutos por cada lado (al gusto)." },
+            { title: "Reposar", desc: "Dejar reposar la carne 5 minutos antes de cortar. Añadir sal en escamas al servir." }
         ]
     },
     {
-        id: 35,
-        title: "Tarta de Santiago",
-        family: "postres",
-        occasion: ["postre", "merienda", "celebracion"],
-        time: 50,
-        difficulty: "Fácil",
-        servings: 8,
-        origin: "Galicia",
-        searchKeywords: ["almendra", "cruz", "sin gluten"],
-        image: "assets/fotos_recetas/tarta_de_santiago.png",
+        id: 46,
+        title: "Huevos Poché",
+        family: "huevos",
+        occasion: ["desayuno", "brunch", "saludable"],
+        time: 10,
+        difficulty: "Media",
+        servings: 2,
+        origin: "Francia/Internacional",
+        searchKeywords: ["huevo", "escalfado", "tostada"],
+        image: "assets/fotos_recetas/huevos_poché.png",
         ingredients: [
-            { name: "Almendra molida", amount: 250, unit: "g" },
-            { name: "Azúcar", amount: 250, unit: "g" },
-            { name: "Huevos grandes", amount: 5, unit: "uni" },
-            { name: "Ralladura de limón", amount: 1, unit: "uni" },
-            { name: "Canela", amount: 1, unit: "cdita" },
-            { name: "Azúcar glass (decorar)", amount: 50, unit: "g" }
+            { name: "Huevos frescos", amount: 2, unit: "uni" },
+            { name: "Agua", amount: 1, unit: "l" },
+            { name: "Vinagre", amount: 1, unit: "chorrito" },
+            { name: "Pan integral", amount: 2, unit: "rebanadas" },
+            { name: "Aguacate (opcional)", amount: 1, unit: "uni" }
         ],
         steps: [
-            { title: "Batir", desc: "Mezclar huevos y azúcar con varillas hasta que blanqueen un poco." },
-            { title: "Almendra", desc: "Añadir la almendra, canela y ralladura de limón. Mezclar suavemente." },
-            { title: "Hornear", desc: "Molde untado con mantequilla. Horno 180ºC durante 30-35 min hasta que dore." },
-            { title: "Cruz", desc: "Dejar enfriar. Poner la plantilla de la Cruz de Santiago y espolvorear azúcar glass." }
+            { title: "Agua", desc: "Calentar agua con vinagre sin que llegue a hervir fuerte (punto de ebullición suave)." },
+            { title: "Remolino", desc: "Crear un remolino en el agua y echar el huevo con cuidado en el centro." },
+            { title: "Cocer", desc: "Cocinar 3-4 minutos hasta que la clara cuaje pero la yema siga líquida." }
+        ]
+    },
+    {
+        id: 47,
+        title: "Tabla de Quesos y Embutidos",
+        family: "tapas",
+        occasion: ["aperitivo", "cena", "picoteo"],
+        time: 15,
+        difficulty: "Fácil",
+        servings: 4,
+        origin: "Nacional",
+        searchKeywords: ["jamón", "queso", "chorizo", "lomo"],
+        image: "assets/fotos_recetas/tabla_de_quesos_y_embutido.png",
+        ingredients: [
+            { name: "Jamón Ibérico", amount: 100, unit: "g" },
+            { name: "Queso Manchego curado", amount: 150, unit: "g" },
+            { name: "Chorizo Ibérico", amount: 100, unit: "g" },
+            { name: "Lomo embuchado", amount: 100, unit: "g" },
+            { name: "Picos/Regañás", amount: 1, unit: "bolsa" },
+            { name: "Uvas/Nueces", amount: 1, unit: "puñado" }
+        ],
+        steps: [
+            { title: "Temperar", desc: "Sacar los embutidos y quesos de la nevera 30 min antes para que suden y tengan sabor." },
+            { title: "Cortar", desc: "Cortar el queso en cuñas o dados. Disponer los embutidos de forma atractiva." },
+            { title: "Acompañar", desc: "Servir con pan crujiente, uvas o frutos secos." }
+        ]
+    },
+    {
+        id: 32,
+        title: "Bacalao con Verduras y Tomate",
+        family: ["pescados", "only_vegetal"],
+        occasion: ["comida", "cena", "tapas"],
+        time: 40,
+        difficulty: "Fácil",
+        servings: 3,
+        origin: "Nacional",
+        searchKeywords: ["bacalao", "verduras", "tomate", "berenjena", "pimiento"],
+        image: "assets/fotos_recetas/bacalao_con_verduras_y_tomate.png",
+        ingredients: [
+            { name: "Lomos de bacalao (punto de sal)", amount: 5, unit: "uni" },
+            { name: "Berenjena", amount: 1, unit: "uni" },
+            { name: "Pimiento rojo", amount: 0.5, unit: "uni" },
+            { name: "Cebolla", amount: 1, unit: "uni" },
+            { name: "Tomate frito", amount: 1, unit: "bote" },
+            { name: "Aceite de oliva", amount: 50, unit: "ml" },
+            { name: "Harina", amount: 50, unit: "g" },
+            { name: "Sal", amount: 1, unit: "pizca" }
+        ],
+        steps: [
+            { title: "Verduras", desc: "Lavamos y cortamos verduras en cuadrados. Pochar cebolla en sartén con aceite (5 min)." },
+            { title: "Sofreír", desc: "Añadir berenjena y pimiento, cocinar 10 min. Incorporar tomate frito y sal, cocinar 8-10 min más." },
+            { title: "Bacalao", desc: "En otra sartén, pasar bacalao por harina y sellar vuelta y vuelta en aceite caliente." },
+            { title: "Terminar", desc: "Poner el bacalao en la sartén con el tomate y verduras (piel hacia arriba). Tapar y cocinar 3 min." }
+        ]
+    },
+    {
+        id: 50,
+        title: "Contramuslos de Pollo con Patatas Panadera",
+        family: "carnes",
+        occasion: ["comida", "cena", "domingo", "facil"],
+        time: 60,
+        difficulty: "Fácil",
+        servings: 2,
+        origin: "Nacional",
+        searchKeywords: ["pollo", "horno", "patatas", "contramuslos", "asado", "facil"],
+        image: "assets/fotos_recetas/contramuslos_de_pollo_al_horno_con_patatas_panadera.png",
+        ingredients: [
+            { name: "Contramuslos de pollo", amount: 2, unit: "piezas" },
+            { name: "Patatas medianas", amount: 3, unit: "uni" },
+            { name: "Aceite de oliva", amount: 30, unit: "ml" },
+            { name: "Sal", amount: 1, unit: "cucharadita" },
+            { name: "Pimienta negra", amount: 0.5, unit: "cucharadita" },
+            { name: "Cebolla en polvo", amount: 1, unit: "cucharadita" },
+            { name: "Ajo en polvo", amount: 1, unit: "cucharadita" },
+            { name: "Sazonador de pollo / Avecrem", amount: 1, unit: "pastilla" },
+            { name: "Perejil seco", amount: 1, unit: "cucharadita" },
+            { name: "Agua", amount: 1, unit: "vaso (hasta cubrir)" }
+        ],
+        steps: [
+            { title: "Preparar base", desc: "Vierte el aceite en la bandeja. Coloca una capa de patatas en rodajas y salpimenta." },
+            { title: "Colocar pollo", desc: "Pon los contramuslos encima de las patatas." },
+            { title: "Sazonar", desc: "Espolvorea cebolla, ajo, sazonador y perejil sobre el pollo." },
+            { title: "Hidratar", desc: "Añade agua hasta cubrir los contramuslos (sin taparlos del todo para que doren)." },
+            { title: "Hornear", desc: "Hornea a 200°C hasta que el pollo esté dorado y las patatas tiernas. Añadir más agua si es necesario." },
+            { title: "Servir", desc: "Servir caliente. Las patatas estarán deliciosas en su salsa." }
         ]
     }
 ];
